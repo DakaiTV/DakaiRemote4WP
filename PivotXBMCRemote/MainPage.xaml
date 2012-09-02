@@ -28,7 +28,7 @@
                             <ImageBrush ImageSource="/PivotXBMCRemote;component/Skin/btn-medium.jpg" />
                         </Button.Background>
                     </Button>
-                    <Button HorizontalAlignment="Left" Margin="378,6,0,0" Name="ButtonPowerOff" VerticalAlignment="Top" BorderThickness="0" Height="70" Width="70">
+                    <Button HorizontalAlignment="Left" Margin="378,6,0,0" Name="ButtonPowerOff" VerticalAlignment="Top" BorderThickness="0" Height="70" Width="70" Click="ButtonPowerOff_Click">
                         <Button.Background>
                             <ImageBrush ImageSource="/PivotXBMCRemote;component/Skin/btn-power.jpg" />
                         </Button.Background>
