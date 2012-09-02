@@ -1,0 +1,89 @@
+﻿<phone:PhoneApplicationPage 
+    x:Class="PivotXBMCRemote.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:phone="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone"
+    xmlns:shell="clr-namespace:Microsoft.Phone.Shell;assembly=Microsoft.Phone"
+    xmlns:controls="clr-namespace:Microsoft.Phone.Controls;assembly=Microsoft.Phone.Controls"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+    mc:Ignorable="d" d:DesignWidth="480" d:DesignHeight="768" 
+    FontFamily="{StaticResource PhoneFontFamilyNormal}"
+    FontSize="{StaticResource PhoneFontSizeNormal}"
+    Foreground="{StaticResource PhoneForegroundBrush}"
+    SupportedOrientations="Portrait"  Orientation="Portrait"
+    shell:SystemTray.IsVisible="True">
+
+    <!--LayoutRoot is the root grid where all page content is placed-->
+    <Grid x:Name="LayoutRoot" Background="Transparent">
+        <!--Pivot Control-->
+        <controls:Pivot Title="XBMC控制器">
+            <!--Pivot item one-->
+            <controls:PivotItem Header="控制器">
+                <!--ContentPanel - place additional content here-->
+                <Grid x:Name="ContentPanel" Grid.Row="1" Margin="0,0,0,0">
+                    <Image Height="659" HorizontalAlignment="Left" Name="imageBackground" Stretch="Fill" VerticalAlignment="Top" Source="/PivotXBMCRemote;component/Skin/remote.jpg" IsHitTestVisible="False" Width="470" />
+                    <Button Content="主页" Height="85" HorizontalAlignment="Left" Margin="0,6,0,0" Name="ButtonHome" VerticalAlignment="Top" Width="125" Click="ButtonHome_Click" BorderThickness="0" Padding="10,1,10,5" FontSize="26">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/PivotXBMCRemote;component/Skin/btn-medium.jpg" />
+                        </Button.Background>
+                    </Button>
+                    <Button HorizontalAlignment="Left" Margin="378,6,0,0" Name="ButtonPowerOff" VerticalAlignment="Top" BorderThickness="0" Height="70" Width="70">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/PivotXBMCRemote;component/Skin/btn-power.jpg" />
+                        </Button.Background>
+                    </Button>
+                    <Button Height="94" HorizontalAlignment="Left" Margin="181,89,0,0" Name="ButtonUp" VerticalAlignment="Top" Width="104" Click="ButtonUp_Click" BorderThickness="0" Padding="0" />
+                    <Button Height="90" HorizontalAlignment="Left" Margin="181,273,0,0" Name="ButtonDown" VerticalAlignment="Top" Width="102" Click="ButtonDown_Click" BorderThickness="0" Padding="0" />
+                    <Button Height="96" HorizontalAlignment="Left" Margin="96,176,0,0" Name="ButtonLeft" VerticalAlignment="Top" Width="91" Click="ButtonLeft_Click" BorderThickness="0" Padding="0" />
+                    <Button Height="96" HorizontalAlignment="Right" Margin="0,175,85,0" Name="ButtonRight" VerticalAlignment="Top" Width="90" Click="ButtonRight_Click" BorderThickness="0" AllowDrop="False" Padding="0" />
+                    <Button Content="确认" Height="85" HorizontalAlignment="Right" Margin="0,181,179,0" Name="ButtonSelect" VerticalAlignment="Top" Width="94" Click="ButtonSelect_Click" BorderThickness="0" Padding="10,0,0,0" FontSize="26" />
+                    <Button Content="返回" Height="85" HorizontalAlignment="Left" Margin="-3,312,0,0" Name="ButtonHistory" VerticalAlignment="Top" Width="125" Click="ButtonHistory_Click" BorderThickness="0" FontSize="26" Padding="10,1,10,5">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/PivotXBMCRemote;component/Skin/btn-medium.jpg" />
+                        </Button.Background>
+                    </Button>
+                    <Button Height="98" HorizontalAlignment="Left" Margin="347,403,0,0" Name="ButtonVolumeUp" VerticalAlignment="Top" Width="100" Click="ButtonVolumeUp_Click" BorderThickness="0" Padding="0" />
+                    <Button Height="98" HorizontalAlignment="Left" Margin="238,0,0,105" Name="ButtonVolumeDown" VerticalAlignment="Bottom" Width="100" Click="ButtonVolumeDown_Click" BorderThickness="0" Padding="0" />
+                    <Button Height="73" HorizontalAlignment="Left" Margin="367,312,0,0" Name="ButtonMute" VerticalAlignment="Top" Width="86" Click="ButtonMute_Click" BorderThickness="0">
+                        <Button.Background>
+                            <ImageBrush ImageSource="/PivotXBMCRemote;component/Skin/btn-mute.jpg" />
+                        </Button.Background>
+                    </Button>
+                    <Button Height="70" HorizontalAlignment="Left" Margin="104,423,0,0" Name="ButtonPlay" VerticalAlignment="Top" Width="82" Click="ButtonPlay_Click" BorderThickness="0" Padding="0" />
+                    <Button Height="70" HorizontalAlignment="Left" Margin="10,422,0,0" Name="ButtonStop" VerticalAlignment="Top" Width="86" Click="ButtonStop_Click" BorderThickness="0" Padding="0" />
+                    <Button Height="72" HorizontalAlignment="Left" Margin="49,520,0,0" Name="ButtonPrev" VerticalAlignment="Top" Width="93" Click="ButtonPrev_Click" BorderThickness="0" Padding="0" />
+                    <Button Height="67" HorizontalAlignment="Right" Margin="0,522,229,0" Name="ButtonBack" VerticalAlignment="Top" Width="84" Click="ButtonBack_Click" BorderThickness="0" Padding="0" />
+                    <Button Height="65" HorizontalAlignment="Left" Margin="233,523,0,0" Name="ButtonForward" VerticalAlignment="Top" Width="80" Click="ButtonForward_Click" BorderThickness="0" Padding="0" />
+                    <Button Height="70" HorizontalAlignment="Right" Margin="0,520,49,0" Name="ButtonNext" VerticalAlignment="Top" Width="91" Click="ButtonNext_Click" BorderThickness="0" />
+                    <TextBlock Height="30" HorizontalAlignment="Left" Margin="8,512,0,0" Name="textBlockDebug" Text="" VerticalAlignment="Top" />
+                </Grid>
+            </controls:PivotItem>
+ 
+            <!--Pivot item two-->
+            <controls:PivotItem Header="设置">
+                <!--ContentPanel - place additional content here-->
+                <Grid x:Name="ContentPanelSetting" Grid.Row="1" Margin="0,0,0,0">
+                    <TextBox Height="72" HorizontalAlignment="Left" Margin="0,186,0,0" Name="textBoxHost" Text="192.168.1.100:8080" VerticalAlignment="Top" Width="450" />
+                    <Button Content="保存" Height="72" HorizontalAlignment="Left" Margin="290,264,0,0" Name="buttonSave" VerticalAlignment="Top" Width="160" Click="buttonSave_Click" />
+                    <TextBlock Height="30" HorizontalAlignment="Left" Margin="229,571,0,0" Name="textBlockAuthor" Text="作者: Huaqiang Zhong" VerticalAlignment="Top" />
+                    <TextBlock Height="30" HorizontalAlignment="Left" Margin="16,153,0,0" Name="textBlockSetting" Text="设置XMBC媒体中心的服务器IP地址：" VerticalAlignment="Top" />
+                </Grid>
+            </controls:PivotItem>
+        </controls:Pivot>
+        
+    </Grid>
+ 
+    <!--Sample code showing usage of ApplicationBar-->
+    <!--<phone:PhoneApplicationPage.ApplicationBar>
+        <shell:ApplicationBar IsVisible="True" IsMenuEnabled="True">
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button1.png" Text="Button 1"/>
+            <shell:ApplicationBarIconButton IconUri="/Images/appbar_button2.png" Text="Button 2"/>
+            <shell:ApplicationBar.MenuItems>
+                <shell:ApplicationBarMenuItem Text="MenuItem 1"/>
+                <shell:ApplicationBarMenuItem Text="MenuItem 2"/>
+            </shell:ApplicationBar.MenuItems>
+        </shell:ApplicationBar>
+    </phone:PhoneApplicationPage.ApplicationBar>-->
+
+</phone:PhoneApplicationPage>
