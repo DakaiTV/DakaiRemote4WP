@@ -73,7 +73,7 @@ namespace PivotXBMCRemote
             }
             else
             {
-                MessageBox.Show("无法访问XBMC媒体中心服务器：" + userSettings["host"]);
+                // MessageBox.Show("无法访问XBMC媒体中心服务器：" + userSettings["host"]);
             }
         }
 
@@ -96,7 +96,7 @@ namespace PivotXBMCRemote
             }
             else
             {
-                MessageBox.Show("无法访问XBMC媒体中心服务器：" + userSettings["host"]);
+                // MessageBox.Show("无法访问XBMC媒体中心服务器：" + userSettings["host"]);
             }
         }
 
@@ -113,7 +113,7 @@ namespace PivotXBMCRemote
             }
             else
             {
-                MessageBox.Show("无法访问XBMC媒体中心服务器："+ userSettings["host"]);
+                // MessageBox.Show("无法访问XBMC媒体中心服务器："+ userSettings["host"]);
             }
         }
     }

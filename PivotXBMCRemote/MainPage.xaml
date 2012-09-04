@@ -66,8 +66,9 @@
                 <Grid x:Name="ContentPanelSetting" Grid.Row="1" Margin="0,0,0,0">
                     <TextBox Height="72" HorizontalAlignment="Left" Margin="0,186,0,0" Name="textBoxHost" Text="192.168.1.100:8080" VerticalAlignment="Top" Width="450" />
                     <Button Content="保存" Height="72" HorizontalAlignment="Left" Margin="290,264,0,0" Name="buttonSave" VerticalAlignment="Top" Width="160" Click="buttonSave_Click" />
-                    <TextBlock Height="30" HorizontalAlignment="Left" Margin="229,571,0,0" Name="textBlockAuthor" Text="作者: Huaqiang Zhong" VerticalAlignment="Top" />
+                    <TextBlock Height="30" HorizontalAlignment="Left" Margin="242,570,0,0" Name="textBlockAuthor" Text="作者: Huaqiang Zhong" VerticalAlignment="Top" />
                     <TextBlock Height="30" HorizontalAlignment="Left" Margin="16,153,0,0" Name="textBlockSetting" Text="设置XMBC媒体中心的服务器IP地址：" VerticalAlignment="Top" />
+                    <Button Content="关闭电脑" Height="72" HorizontalAlignment="Left" Margin="291,502,0,0" Name="button1" VerticalAlignment="Top" Width="160" Click="button1_Click" />
                 </Grid>
             </controls:PivotItem>
         </controls:Pivot>

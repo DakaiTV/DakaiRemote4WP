@@ -156,7 +156,12 @@ namespace PivotXBMCRemote
 
         private void ButtonPowerOff_Click(object sender, RoutedEventArgs e)
         {
-            remote.SendKey("System.Shutdown", "{\"jsonrpc\": \"2.0\", \"method\": \"Application.Close\", \"id\": 1}");
+            remote.SendKey("Application.Quit", "{\"jsonrpc\": \"2.0\", \"method\": \"Application.Quit\", \"id\": 1}");
+        }
+
+        private void button1_Click(object sender, RoutedEventArgs e)
+        {
+            remote.SendKey("System.Shutdown", "{\"jsonrpc\": \"2.0\", \"method\": \"System.Shutdown\", \"id\": 1}");
         }
     }
 }
